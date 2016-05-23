@@ -1,0 +1,35 @@
+{
+  "jspm": {
+    "dependencies": {
+      "knockout": "github:knockout/knockout@^3.4.0",
+      "knockout-postbox": "github:rniemeyer/knockout-postbox@0.5.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "github:knockout/knockout@3.4.0": {
+        "directories": {
+          "lib": "dist"
+        },
+        "main": "knockout.debug",
+        "shim": {
+          "knockout.debug": {
+            "exports": "ko"
+          }
+        }
+      },
+      "github:rniemeyer/knockout-postbox@0.5.2": {
+        "directories": {
+          "lib": "build"
+        },
+        "main": "knockout-postbox",
+        "dependencies": {
+          "knockout": "github:knockout/knockout@3.4.0"
+        }
+      }
+    }
+  }
+}
